@@ -7,6 +7,7 @@ import {
   incrementByAmount,
   selectCount,
 } from './redux/counterSlice';
+import './style.css';
 
 export default function App() {
   const count = useSelector(selectCount);
@@ -22,8 +23,6 @@ export default function App() {
       >
         increment
       </button>
-      <br />
-      <br />
       <button
         onClick={() => {
           dispatch(decrement());
@@ -31,8 +30,6 @@ export default function App() {
       >
         decrement
       </button>
-      <br />
-      <br />
       <button onClick={() => dispatch(incrementByAmount(Number(10) || 0))}>
         increment by 10
       </button>
